@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            brrEmail = new TextBox();
             email = new Label();
-            textBox2 = new TextBox();
+            brrSenha = new TextBox();
             Senha = new Label();
             Entrar = new Button();
             Cancelar = new Button();
+            labelMensagem = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // brrEmail
             // 
-            textBox1.Location = new Point(261, 161);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(265, 23);
-            textBox1.TabIndex = 0;
+            brrEmail.Location = new Point(261, 161);
+            brrEmail.Name = "brrEmail";
+            brrEmail.Size = new Size(265, 23);
+            brrEmail.TabIndex = 0;
             // 
             // email
             // 
@@ -52,14 +53,14 @@
             email.TabIndex = 1;
             email.Text = "Email";
             // 
-            // textBox2
+            // brrSenha
             // 
-            textBox2.Location = new Point(261, 214);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(265, 23);
-            textBox2.TabIndex = 2;
-            textBox2.UseSystemPasswordChar = true;
-            textBox2.TextChanged += textBox2_TextChanged;
+            brrSenha.Location = new Point(261, 214);
+            brrSenha.Name = "brrSenha";
+            brrSenha.Size = new Size(265, 23);
+            brrSenha.TabIndex = 2;
+            brrSenha.UseSystemPasswordChar = true;
+            brrSenha.TextChanged += TextBox2_TextChanged;
             // 
             // Senha
             // 
@@ -88,31 +89,42 @@
             Cancelar.Text = "Cancelar";
             Cancelar.UseVisualStyleBackColor = true;
             // 
+            // labelMensagem
+            // 
+            labelMensagem.AutoSize = true;
+            labelMensagem.Location = new Point(363, 346);
+            labelMensagem.Name = "labelMensagem";
+            labelMensagem.Size = new Size(0, 15);
+            labelMensagem.TabIndex = 6;
+            // 
             // Atividade_email_e_senha
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(labelMensagem);
             Controls.Add(Cancelar);
             Controls.Add(Entrar);
             Controls.Add(Senha);
-            Controls.Add(textBox2);
+            Controls.Add(brrSenha);
             Controls.Add(email);
-            Controls.Add(textBox1);
+            Controls.Add(brrEmail);
             Name = "Atividade_email_e_senha";
             Text = "Atividade_email_e_senha";
+            Load += Atividade_email_e_senha_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox brrEmail;
         private Label email;
-        private TextBox textBox2;
+        private TextBox brrSenha;
         private Label Senha;
         private Button Entrar;
         private Button Cancelar;
+        private Label labelMensagem;
     }
 }
