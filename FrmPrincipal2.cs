@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace sysTINSApp
 {
-    public partial class FrmLofin : Form
+    public partial class FPL : Form
     {
-        public FrmLofin()
+        public FPL()
         {
             InitializeComponent();
+        }
+
+        private void FPL_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
