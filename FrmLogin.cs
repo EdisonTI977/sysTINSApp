@@ -28,7 +28,7 @@
         {
             // colocar a validação do login
             var Usuario = Usuario.EfetuarLogin(txtEmail.Text, txtSenha.Text);
-            if (usuario.Id > 0)
+            if (sysTINSApp.Usuario.Id > 0)
             {
 
                 Close();

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace sysTINSApp
+﻿namespace sysTINSApp
 {
     public partial class Atividade_email_e_senha : Form
     {
@@ -17,9 +7,37 @@ namespace sysTINSApp
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void Atividade_email_e_senha_Load(object sender, EventArgs e)
+        {
+            // colocar a validação do login
+            _ = EfetuarLogin(brrEmail.Text, brrSenha.Text);
+            if (Usuario.Id > 0)
+            {
+
+                Close();
+
+            }
+            else
+            {
+                labelMensagem.Text = "Usuário e/ou senha inválidos";
+
+
+            }
+        }
+
+        private object EfetuarLogin(string text1, string text2)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal class Usuario
+    {
+        public static int Id { get; internal set; }
     }
 }
